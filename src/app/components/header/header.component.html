@@ -15,10 +15,17 @@
       </mat-form-field>
     </form>
   </div>
-  <div class="d-flex align-items-center justify-content-right sort-section d-none d-lg-flex">
+  <div
+    class="d-flex align-items-center justify-content-right sort-section d-none d-lg-flex"
+  >
     <span>Sort By:</span>&nbsp;
-    <button mat-flat-button color="primary" [matMenuTriggerFor]="menu" class="button-with-icon">
-      <span>{{sortName}}</span>
+    <button
+      mat-flat-button
+      color="primary"
+      [matMenuTriggerFor]="menu"
+      class="button-with-icon"
+    >
+      <span>{{ sortName }}</span>
       <mat-icon>expand_more</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
@@ -35,21 +42,23 @@
 
   <div class="small-header d-lg-none">
     <form (submit)="filterAndSortEmit()">
-        <mat-form-field appearance="outline" class="w-100">
-          <input
-            matInput
-            placeholder="search for items in this list"
-            name="product_search"
-            [(ngModel)]="search"
-          />
-          <mat-icon matSuffix>search</mat-icon>
-        </mat-form-field>
+      <mat-form-field appearance="outline" class="w-100">
+        <input
+          matInput
+          placeholder="search for items in this list"
+          name="product_search"
+          [(ngModel)]="search"
+        />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
     </form>
     <div class="row">
-        <div class="col-6"><button mat-flat-button color="primary">Filter</button></div>
-        <div class="col-6"><button mat-flat-button color="primary">Sort</button></div>
+      <div class="col-6">
+        <button mat-flat-button color="primary">Filter</button>
+      </div>
+      <div class="col-6">
+        <button mat-flat-button color="primary">Sort</button>
+      </div>
     </div>
   </div>
-  
 </nav>
-
