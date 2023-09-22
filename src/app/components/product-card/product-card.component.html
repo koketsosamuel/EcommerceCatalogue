@@ -1,0 +1,16 @@
+<div class="product-card">
+    <div class="sale-banner" *ngIf="product.salePrice">SALE</div>
+    <img [src]="product.imgSrc" alt="">
+    <h3>{{product.name}}</h3>
+    <span>{{product.category}}</span>
+    <div class="card-actions d-flex justify-content-space-between align-items-center mt-2">
+        <div>
+            <span class="price">R {{product.price}}</span>
+            <br>
+            <span class="sale-price" *ngIf="product.salePrice">
+                <s>R{{product.salePrice}}</s>
+            </span>
+        </div>
+        <button mat-flat-button color="primary">View <mat-icon>arrow_forward</mat-icon></button>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+  
+  <app-header [search]="search" [sortMethod]="sortMethod" [products]="products" (inputChanged)="headerInputsChanged($event)"></app-header>
+
+  <div class="mt-4 row">
+    <div class="col-lg-4">
+      <app-categories-selector [filter]="filter" (categoryChanged)="filterAndSort($event)"></app-categories-selector>
+    </div>
+    <div class="col-lg-8">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 col-6" *ngFor="let product of products">
+          <app-product-card [product]="product"></app-product-card> 
+        </div>
+      </div>
+      <h4 class="show-more" *ngIf="productsLeft.length > 0" (click)="showMore()"><u>SHOW MORE</u></h4>
+    </div>
+  </div>
+</div>

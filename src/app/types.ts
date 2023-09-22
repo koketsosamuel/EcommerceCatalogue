@@ -1,0 +1,1 @@
+export type tSortMethod = 'NAME:A_Z' | 'CATEGORY:A-Z' | 'PRICE:L-H' | 'PRICE:H-L';

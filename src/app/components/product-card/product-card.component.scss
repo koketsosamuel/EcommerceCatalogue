@@ -1,0 +1,46 @@
+.product-card {
+    padding: 15px;
+    img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    box-sizing: border-box;
+    h3, span:not(.price) {
+        font-weight: 300;
+        padding: 0px;
+        margin: 5px 0px;
+    }
+
+    .sale-price {
+        font-size: 13px;
+        color: #979797;
+    }
+
+    .card-actions {
+        button {
+            display: none;
+        }
+    }
+
+    .sale-banner {
+        z-index: 5;
+        position: absolute;
+        padding: 15px;
+        background: #ccc;
+        display: inline-block;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    
+}
+
+.product-card:hover {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    .card-actions {
+        button {
+            display: inline;
+        }
+    }
+}

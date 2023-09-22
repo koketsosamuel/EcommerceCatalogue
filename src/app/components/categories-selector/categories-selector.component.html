@@ -1,0 +1,10 @@
+<mat-accordion class=" d-none d-lg-block">
+    <mat-expansion-panel expanded>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Categories </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-selection-list name="categories" [(ngModel)]="filter" (selectionChange)="filterAndSortEmit()">
+        <mat-list-option *ngFor="let category of categories" [value]="category"> {{category}}</mat-list-option>
+      </mat-selection-list>
+    </mat-expansion-panel>
+  </mat-accordion>
